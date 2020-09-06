@@ -11,25 +11,25 @@ import Foundation
 
 let inputs = readLine()!.split(separator: " ").map { return Int($0)! }
 let n = inputs[0]
-let m = inputs[1]
-let numbers = readLine()!.split(separator: " ").map { return Int($0)! }
+let k = inputs[1]
+var count = 0
+var arr = Array(repeating: 1, count: n + 1)
 
-var startIndex = 0
-var endIndex = 0
-var result = 0
-var sum = 0
-
-while true {
-    if sum >= m {
-        sum -= numbers[startIndex]
-        startIndex += 1
+for i in 2...n {
+    if arr[i] == 0 { continue }
+    for j in stride(from: i, to: n + 1, by: i) {
+        if arr[j] == 0 { continue }
+        count += 1
+        if count == k {
+            print(j)
+            break
+        }
+        arr[j] = 0
     }
-    else if endIndex == n { break }
-    else {
-        sum += numbers[endIndex]
-        endIndex += 1
-    }
-    if sum == m { result += 1}
 }
 
-print(result)
+//for i in 2...n {
+//    if arr[i] != 0 {
+//        print(i)
+//    }
+//}
