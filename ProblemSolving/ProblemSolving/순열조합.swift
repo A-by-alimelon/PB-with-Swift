@@ -78,3 +78,39 @@
 //    }
 //
 //}
+
+
+
+//let inputs = readLine()!.split(separator: " ").map { return Int($0)! }
+//let n = inputs[0]
+//let m = inputs[1]
+//
+//var graph = [[Int]]()
+//for _ in 0..<n {
+//    graph.append(Array(readLine()!).map { Int(String($0))! })
+//}
+//
+//func dfs(_ x: Int, _ y: Int) -> Bool {
+//    if x <= -1 || x >= n || y <= -1 || y >= m {
+//        return false
+//    }
+//    if graph[x][y] == 0 {
+//        graph[x][y] = 1
+//        dfs(x - 1, y)
+//        dfs(x, y - 1)
+//        dfs(x + 1, y)
+//        dfs(x, y + 1)
+//        return true
+//    }
+//    return false
+//}
+//
+//var result = 0
+//for i in 0..<n {
+//    for j in 0..<m {
+//        if dfs(i, j) == true {
+//            result += 1
+//        }
+//    }
+//}
+//print(result)
