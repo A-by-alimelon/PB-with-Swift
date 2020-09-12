@@ -24,7 +24,7 @@ Swift5로 알고리즘 문제 풀이
   * [수들의 합 2](https://github.com/A-by-alimelon/PB-with-Swift/blob/master/BOJ/2003.swift)
   * [소수의 연속합](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/BOJ/1644.swift)
   
-* 그리디
+* **그리디**
   * [거스름돈](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/BOJ/5585.swift)
 
 
