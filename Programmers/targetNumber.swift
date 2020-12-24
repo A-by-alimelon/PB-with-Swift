@@ -6,8 +6,7 @@ var result = 0
 func solution(_ numbers: [Int], _ target: Int) -> Int {
     inputNumbers = numbers
     targetNumber = target
-    dfs(1, numbers[0])
-    dfs(1, -numbers[0])
+    dfs(0, 0)
     return result
 }
 
