@@ -17,6 +17,9 @@ Swift5로 알고리즘 문제 풀이
  
 * **level2**
   * [타겟넘버](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/targetNumber.swift)
+ 
+* **level3**
+  * [N으로 표현](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/N%EC%9C%BC%EB%A1%9C_%ED%91%9C%ED%98%84.swift)
   
   
 
@@ -36,3 +39,7 @@ Swift5로 알고리즘 문제 풀이
   * [특정 거리의 도시 찾기](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/BOJ/18352.swift)
   * [연구소](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/BOJ/14502.swift)
 
+* **DP**
+  * [퇴사](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/BOJ/14501.swift)
+  * [정수 삼각형](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/BOJ/1932.swift)
+  
