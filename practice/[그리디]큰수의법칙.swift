@@ -21,3 +21,22 @@ while m > 0 {
 }
 
 print(result)
+
+// 수식으로 풀기
+
+let inputs = readLine()!.split(separator: " ").map { return Int($0)! }
+var n = inputs[0], m = inputs[1], k = inputs[2]
+
+var arr = readLine()!.split(separator: " ").map { return Int($0)! }
+arr.sort()
+let first = arr.popLast()!
+let second = arr.popLast()!
+
+var count = m / (k + 1) * k
+count += m % (k + 1)
+
+var result = 0
+result += count * first
+result += (m - count) * second
+
+print(result)
