@@ -25,6 +25,10 @@ Swift5로 알고리즘 문제 풀이
 
 #### 백준
 
+* **구현**
+
+  * [럭키 스트레이트](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/BOJ/18406.swift)
+
 * **두 포인터**
 
   * [수들의 합 2](https://github.com/A-by-alimelon/PB-with-Swift/blob/master/BOJ/2003.swift)
