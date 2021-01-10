@@ -17,11 +17,11 @@ Swift5로 알고리즘 문제 풀이
  
 * **level2**
   * [타겟넘버](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/targetNumber.swift)
-  * [문자열 압축](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/%EB%AC%B8%EC%9E%90%EC%97%B4%EC%95%95%EC%B6%95.swift)
+  * [문자열 압축](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/%EB%AC%B8%EC%9E%90%EC%97%B4_%EC%95%95%EC%B6%95.swift)
  
 * **level3**
   * [N으로 표현](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/N%EC%9C%BC%EB%A1%9C_%ED%91%9C%ED%98%84.swift)
-  * [자물쇠와 열쇠](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/%EC%9E%90%EB%AC%BC%EC%87%A0%EC%99%80%20%EC%97%B4%EC%87%A0.swift)
+  * [자물쇠와 열쇠](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/%EC%9E%90%EB%AC%BC%EC%87%A0%EC%99%80_%EC%97%B4%EC%87%A0.swift)
   
   
 
