@@ -1,3 +1,12 @@
+struct Data: Comparable {
+    static func < (lhs: Data, rhs: Data) -> Bool {
+        return lhs.distance < rhs.distance
+    }
+
+    var distance: Int
+    var dest: Int
+}
+
 /// 개선된(시간) 다익스트라 알고리즘 구현
 let inputs = readLine()!.split(separator: " ").map { return Int($0)! }
 // n = 노드 개수, m = 간선 개수
