@@ -1,12 +1,37 @@
-/// Max Heap 구현
-struct MaxHeap<T: Comparable> {
-    private var heap = [T]()
+protocol Heap {
+    associatedtype E
+    var heap: [E] {get set}
     
-    init() {}
-    init(_ data: T) {
+    init()
+    mutating func insert(_ data: E)
+    mutating func pop() -> E?
+    
+}
+
+extension Heap {
+    init(_ data: E) {
+        self.init()
         heap.append(data) // 0번은 임의의 값으로 채움
         heap.append(data) // 루트 노드
+
     }
+    
+    func printHeap() {
+        print(heap)
+    }
+    
+    func isEmpty() -> Bool {
+        return heap.isEmpty
+    }
+    
+}
+
+
+/// Max Heap 구현
+struct MaxHeap<T: Comparable>: Heap{
+    var heap = [T]()
+    
+    init() {}
     
     mutating func insert(_ data: T) {
         // 힙에 데이터가 없을 때
@@ -83,9 +108,5 @@ struct MaxHeap<T: Comparable> {
         }
         
         return returnData
-    }
-    
-    func printHeap() {
-        print(heap)
     }
 }
