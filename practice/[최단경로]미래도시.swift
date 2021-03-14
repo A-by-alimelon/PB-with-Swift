@@ -1,6 +1,6 @@
-/// 플로이드 워셜 알고리즘 구현
 let INF = 987654321
-let n = Int(readLine()!)!, m = Int(readLine()!)!
+let inputs = readLine()!.split(separator: " ").map { return Int($0)! }
+let n = inputs[0], m = inputs[1]
 
 var graph = Array(repeating: Array(repeating: INF, count: n + 1), count: n + 1)
 
@@ -16,10 +16,14 @@ for i in 1..<n + 1 {
 // 간선 정보 입력받아 초기화
 for _ in 0..<m {
     let values = readLine()!.split(separator: " ").map { return Int($0)! }
-    let a = values[0], b = values[1], c = values[2]
+    let a = values[0], b = values[1]
     
-    graph[a][b] = c
+    graph[a][b] = 1
+    graph[b][a] = 1
 }
+
+let inputs2 = readLine()!.split(separator: " ").map { return Int($0)! }
+let x = inputs2[0], k = inputs2[1]
 
 // 플루이드 워셜 알고리즘 수행 (3중 for문)
 for k in 1..<n + 1 {
@@ -31,14 +35,9 @@ for k in 1..<n + 1 {
     }
 }
 
-// 결과 출력
-for a in 1..<n + 1 {
-    for b in 1..<n + 1 {
-        if graph[a][b] >= INF {
-            print("INFINITY", terminator: " ")
-        } else {
-            print("\(graph[a][b])", terminator: " ")
-        }
-    }
-    print()
+let distance = graph[1][k] + graph[k][x]
+if distance >= INF {
+    print(-1)
+} else {
+    print(distance)
 }
