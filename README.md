@@ -14,10 +14,12 @@ Swift5로 알고리즘 문제 풀이
   * [k번째 수](https://github.com/A-by-alimelon/PB-with-Swift/blob/master/Programmers/KthNumber.swift)
   
   * [서울에서 김서방 찾기](https://github.com/A-by-alimelon/PB-with-Swift/blob/master/Programmers/FindKim.swift)
+  * [완주하지 못한 선수]()
  
 * **level2**
   * [타겟넘버](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/targetNumber.swift)
   * [문자열 압축](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/%EB%AC%B8%EC%9E%90%EC%97%B4_%EC%95%95%EC%B6%95.swift)
+  * [전화번호 목록]()
  
 * **level3**
   * [N으로 표현](https://github.com/A-by-alimelon/PS-with-Swift/blob/master/Programmers/N%EC%9C%BC%EB%A1%9C_%ED%91%9C%ED%98%84.swift)
