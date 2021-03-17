@@ -36,3 +36,32 @@ func solution(_ bridge_length:Int, _ weight:Int, _ truck_weights:[Int]) -> Int {
     
     return time
 }
+
+/// 빈 공간을 삽입하는 방법으로 푸는 코드 (위의 코드보다 느림)
+func solution(_ bridge_length:Int, _ weight:Int, _ truck_weights:[Int]) -> Int {
+    var queue = Array(repeating: 0, count: bridge_length)
+    var count = 0
+    var currentWeight = 0
+    var trucks = truck_weights
+    
+    while !queue.isEmpty {
+        currentWeight -= queue.removeFirst()
+        
+        if let truck = trucks.first {
+            if currentWeight + truck <= weight {
+                queue.append(truck)
+                currentWeight += trucks.removeFirst()
+            } else {
+                queue.append(0)
+            }
+        }
+        else {
+            count += 1
+            continue
+        }
+        
+        
+        count += 1
+    }
+    return count
+}
