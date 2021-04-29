@@ -1,28 +1,27 @@
 // 튜플
 func solution(_ s:String) -> [Int] {
     var arrayS = Array(s)
-    var tuples = [[Int]]()
+    var tuples = [Set<Int>]()
     
     arrayS.removeFirst()
     arrayS.removeLast()
     
-    var temp = [Int]()
+    var temp = Set<Int>()
     var tempStr = ""
     
     arrayS.forEach {
         if $0 == "{" {
             temp.removeAll()
         } else if $0 == "," {
-            temp.append(Int(tempStr)!)
+            temp.insert(Int(tempStr)!)
             tempStr = ""
         } else if $0 == "}" {
-            temp.append(Int(tempStr)!)
+            temp.insert(Int(tempStr)!)
             tuples.append(temp)
         } else {
             tempStr += String($0)
         }
     }
-    
     
     tuples.sort{ (v1, v2) -> Bool in
         return v1.count < v2.count
@@ -31,16 +30,12 @@ func solution(_ s:String) -> [Int] {
     var result = [Int]()
     
     for t in tuples {
-        for v in t {
-            if !result.contains(v) {
-                result.append(v)
-                break
-            }
-        }
+        result.append(contentsOf: t.subtracting(result))
     }
     
     return result
 }
+
 
 print(solution("{{2},{2,1},{2,1,3},{2,1,3,4}}"))
 print(solution("{{1,2,3},{2,1},{1,2,4,3},{2}}"))
