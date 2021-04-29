@@ -23,9 +23,7 @@ func solution(_ s:String) -> [Int] {
         }
     }
     
-    tuples.sort{ (v1, v2) -> Bool in
-        return v1.count < v2.count
-    }
+    tuples.sort(by: {$0.count < $1.count})
     
     var result = [Int]()
     
