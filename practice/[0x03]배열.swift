@@ -52,3 +52,23 @@ insert(3, 60, &arr, &len)
 print(arr)
 erase(4, &arr, &len)
 print(arr)
+
+// 연습문제
+func func2(_ arr: [Int]) -> Int{
+    var temp = Array(repeating: 0, count: 51)
+    for i in 0..<arr.count {
+        let index = arr[i] > 50 ? 100 - arr[i] : arr[i]
+        
+        if temp[index] == 1 {
+            return 1
+        } else {
+            temp[index] += 1
+        }
+        
+    }
+    return 0
+}
+
+print(func2([1, 52, 48]))
+print(func2([50, 42]))
+print(func2([4, 13, 63, 87]))
