@@ -4,25 +4,32 @@ func solution(_ gems:[String]) -> [Int] {
     var start = 0
     var end = 1
     var length = 100005
-    var temp = [gems[0]]
+    var dict = [gems[0]: 1]
     
     let setCount = Set(gems).count
     
     while true {
-        if Set(temp).count == setCount {
+        if dict.keys.count == setCount {
             if length > end - start {
                 length = end - start
                 answer[0] = start + 1
                 answer[1] = end
             }
-            temp.removeFirst()
+            if dict[gems[start]] == 1 {
+                dict.removeValue(forKey: gems[start])
+            } else {
+                dict[gems[start]]! -= 1
+            }
             start += 1
         } else if end == gems.count { break }
         else {
-            temp.append(gems[end])
+            if !dict.keys.contains(gems[end]) {
+                dict[gems[end]] = 1
+            } else {
+                dict[gems[end]]! += 1
+            }
             end += 1
         }
-        
     }
     
     return answer
