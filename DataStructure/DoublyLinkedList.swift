@@ -12,9 +12,11 @@ class LinkedList<T> {
     var head: Node<T>?
     var tail: Node<T>?
     
+    var count = 0
     var isEmpty: Bool {
         return head == nil
     }
+    
     
     func appendData(_ value: T) {
         let newNode = Node<T>(value)
@@ -27,6 +29,7 @@ class LinkedList<T> {
             head = newNode
             tail = newNode
         }
+        count += 1
     }
     
     func insert(at index: Int, _ value: T) {
@@ -37,7 +40,7 @@ class LinkedList<T> {
             appendData(value)
         } else { // 링크드 리스트가 비어있지 않으면
             if index == 0 { // head에 삽입할 경우
-                current?.next = head
+                newNode.next = head
                 head?.prev = newNode
                 head = newNode
             } else { // k번째에 삽입
@@ -50,11 +53,56 @@ class LinkedList<T> {
                     }
                 }
                 
+                if index == count { // 삽입하고자 하는 인덱스가 링크드 리스트의 개수와 같으면 tail 업데이트
+                    tail = newNode
+                }
                 current?.next?.prev = newNode
                 newNode.next = current?.next
                 newNode.prev = current
                 current?.next = newNode
             }
+            
+            count += 1
+            
         }
     }
+    
+    func printList() {
+        guard !isEmpty else {
+            print("리스트가 비었습니다. ")
+            return
+        }
+        
+        var current = head
+        
+        while current != nil {
+            print(current!.value, terminator: " ")
+            current = current?.next
+        }
+        print()
+    }
+    
+    func removeData(_ value:T) {
+        
+    }
+    
 }
+
+var linkedList = LinkedList<Int>()
+linkedList.printList()
+linkedList.appendData(1)
+linkedList.printList()
+linkedList.insert(at: 0, 2)
+linkedList.printList()
+linkedList.insert(at: 1, 3)
+linkedList.printList()
+linkedList.insert(at: 3, 4)
+linkedList.printList()
+linkedList.insert(at: 5, 5)
+linkedList.printList()
+linkedList.appendData(1)
+linkedList.printList()
+linkedList.insert(at: 5, 7)
+linkedList.printList()
+linkedList.insert(at: 0, 9)
+linkedList.printList()
