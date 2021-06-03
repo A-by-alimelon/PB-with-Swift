@@ -1,4 +1,4 @@
-
+// 베스트앨범
 func solution(_ genres:[String], _ plays:[Int]) -> [Int] {
     var countDict = [String: Int]()
     var songDict = [String: [(Int, Int)]]()
@@ -26,7 +26,7 @@ func solution(_ genres:[String], _ plays:[Int]) -> [Int] {
 
         for _ in 0..<2 {
             result.append(songs.removeFirst().1)
-            if result.isEmpty {
+            if songs.isEmpty {
                 break
             }
         }
